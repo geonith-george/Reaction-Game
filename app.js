@@ -62,7 +62,6 @@ function stop() {
         setCookie("currentscore", c_score, 30);
         document.getElementById("highscore").innerText="High-Score: "+getCookie("currentscore"); 
     }
-
 }
  
 function reset() {
@@ -114,8 +113,8 @@ function setCookie(cname,cvalue,exdays) {
   
   function checkCookie() {
     var score=getCookie("currentscore");
-    console.log(score);
-    if (score==NaN) 
+    console.log(score, typeof(score));
+    if (score=="") 
     {
     setCookie("currentscore", 10 , 30); 
     console.log("cookie set to 10");
